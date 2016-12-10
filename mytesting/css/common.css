@@ -1,0 +1,52 @@
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+#main-section {
+  position: relative;
+}
+#main-nav {
+  position: absolute;
+  width:100%;
+  background-color: rgba(0,0,0,.3);
+}
+
+html {
+font-size : 62.5%;
+}
+
+p, div, span, a, li, ul {
+  font-size : 1.4rem;
+}
+
+body {
+  margin : 0;
+}
+
+#main-nav > ul {
+  list-style-type: none;
+
+}
+
+#main-nav > ul > li {
+  float : left;
+  padding : 5px 15px;
+
+}
+
+#main-nav > ul > li a {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color:white;
+}
