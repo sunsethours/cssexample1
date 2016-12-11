@@ -12,17 +12,10 @@
 .clearfix { display: block; }
 /* close commented backslash hack */
 
-#main-section {
-  position: relative;
-}
-#main-nav {
-  position: absolute;
-  width:100%;
-  background-color: rgba(0,0,0,.3);
-}
 
 html {
 font-size : 62.5%;
+font-family: Arial;
 }
 
 p, div, span, a, li, ul {
@@ -33,20 +26,68 @@ body {
   margin : 0;
 }
 
-#main-nav > ul {
+
+#main-section {
+  position: relative;
+}
+#main-nav {
+  position: absolute;
+  width:100%;
+  background-color: rgba(0,0,0,.3);
+  height: 60px;
+}
+
+#main-nav .content-wrapper {
+  width : 90%;
+  margin : 0 auto;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#main-nav .content-wrapper > ul {
   list-style-type: none;
-
+	margin: 0px;
+	padding: 0px;
+  height:100%;
 }
 
-#main-nav > ul > li {
+#main-nav .content-wrapper > ul > li {
   float : left;
-  padding : 5px 15px;
-
+  padding : 15px 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+  height: 100%;
+  box-sizing: border-box;
+  display: table;
 }
 
-#main-nav > ul > li a {
+#main-nav .content-wrapper > ul > li:hover {
+  background-color: #620031;
+}
+
+#main-nav .content-wrapper > ul > li a {
   font-size: 1.8rem;
   text-transform: uppercase;
   text-decoration: none;
   color:white;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+
+#main-nav .content-wrapper > ul > li.nav-active{
+	background-color: black;
+
+}
+
+#main-nav .content-wrapper > ul > li.nav-active a{
+ color: #a3a3a3;
+}
+
+#nav-header {
+  float: left;
+}
+
+#nav-items {
+  float: right;
 }
